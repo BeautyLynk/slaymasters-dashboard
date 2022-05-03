@@ -28,6 +28,7 @@ const Home = () => {
                         loop
                         muted
                         controls
+                        autoplay
                         className="home-video"
                     ></video>
                 </div>

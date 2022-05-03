@@ -191,8 +191,7 @@ const Dashboard = () => {
                                     </div>
                                     <div className="tools-grid-item"><Link to="/upload-images"><button >UPLOAD IMAGES</button></Link></div>
                                     <div className="tools-grid-item"><Link to="//tk8wnxtrmyu.typeform.com/to/jg8s2uvd" target='_blank'><button >REFER A FRIEND TO BE A SLAYMASTER</button></Link></div>
-                                    <div className="tools-grid-item"><Link to="//www.google.com" target='_blank'><button >GET HELP</button></Link></div>
-                                    <div className="tools-grid-item"><Link to="//www.google.com" target='_blank'><button >CONSULTATION PROMPTS</button></Link></div>
+                                    <div className="tools-grid-item"><Link to="//www.google.com" target='_blank'><button onClick={() => window.location.href = 'mailto:abdouksene@gmail.com'}> GET HELP</button></Link></div>
                                     <div className="tools-grid-item"><Link to="//slaymastercreators.tawk.help/" target='_blank'><button >VIDEO GUIDELINES</button></Link></div>
                                 </div>
                             </div>
@@ -235,14 +234,14 @@ const Dashboard = () => {
                                 controls
                                 className="training-video"
                             ></video>
-                            <video
-                                src="https://sduxzxrctlxqqbmtfsqr.supabase.co/storage/v1/object/sign/trainingvideos/Video (1).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ0cmFpbmluZ3ZpZGVvcy9WaWRlbyAoMSkubXA0IiwiaWF0IjoxNjUxNTk3MzQ5LCJleHAiOjE5NjY5NTczNDl9.yTlOlo6kDX9uT3llBhCr2prPdzOufcj3fHidBDDA8OA"
+                            {/* <video
+                                src="https://sduxzxrctlxqqbmtfsqr.supabase.co/storage/v1/object/sign/trainingvideos/Video-1.mp4?to[…]YyNjc3fQ.Yo03TQGfiqX3A873urN96tLWjduJE2bpFuhCFxRvSrE"
                                 loop
                                 muted
                                 // poster={howToFrame}
                                 controls
                                 className="training-video"
-                            ></video>
+                            ></video> */}
                                 <video
                                 src="https://sduxzxrctlxqqbmtfsqr.supabase.co/storage/v1/object/sign/trainingvideos/v5.mp4 (720p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ0cmFpbmluZ3ZpZGVvcy92NS5tcDQgKDcyMHApLm1wNCIsImlhdCI6MTY1MTU5NzM2NSwiZXhwIjoxOTY2OTU3MzY1fQ.bieSr320KaKG9O3HusjHTTxyU12GpW3K5xZZmfe5cws"
                                 loop

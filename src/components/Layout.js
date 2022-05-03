@@ -87,12 +87,12 @@ const Layout = ({children}) => {
                     <div className="footer-icon-group">
                         <ul>
                             <li>
-                                <Link to="//google.com" target='_blank'>
+                                <Link to="//slaymastercreators.tawk.help/" target='_blank'>
                                     FAQ
                                 </Link>
                             </li>
                             <li>
-                                <Link to="//instagram.com/goslaymasters/" target='_blank'>
+                                <Link to="//twitter.com/goslaymasters" target='_blank'>
                                     <FaTwitter/>
                                 </Link>
                             </li>
