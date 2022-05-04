@@ -24,7 +24,7 @@ const Home = () => {
                 </div>
                 <div className="home-video-container">
                     <video
-                        autoplay
+                        autoPlay={true}
                         src="https://sduxzxrctlxqqbmtfsqr.supabase.co/storage/v1/object/sign/dashboardvid/slay masters.mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkYXNoYm9hcmR2aWQvc2xheSBtYXN0ZXJzLm1wNCIsImlhdCI6MTY0OTAxNDA4NCwiZXhwIjoxOTY0Mzc0MDg0fQ.cUn9h_tfCxTfTuygMZ8N-LDKe4HV1LPbwbqdFDKOOes"
                         loop
                         muted
