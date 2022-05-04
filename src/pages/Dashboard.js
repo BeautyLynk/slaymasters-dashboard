@@ -191,7 +191,7 @@ const Dashboard = () => {
                                     </div>
                                     <div className="tools-grid-item"><Link to="/upload-images"><button >UPLOAD IMAGES</button></Link></div>
                                     <div className="tools-grid-item"><Link to="//tk8wnxtrmyu.typeform.com/to/jg8s2uvd" target='_blank'><button >REFER A FRIEND TO BE A SLAYMASTER</button></Link></div>
-                                    <div className="tools-grid-item"><Link to="//www.google.com" target='_blank'><button onClick={() => window.location.href = 'mailto:abdouksene@gmail.com'}> GET HELP</button></Link></div>
+                                    <div className="tools-grid-item"><Link to="//www.google.com" target='_blank'><button onClick={() => window.location.href = 'mailto:tickets@slaymaster-creators.p.tawk.email'}> GET HELP</button></Link></div>
                                     <div className="tools-grid-item"><Link to="//slaymastercreators.tawk.help/" target='_blank'><button >VIDEO GUIDELINES</button></Link></div>
                                 </div>
                             </div>
