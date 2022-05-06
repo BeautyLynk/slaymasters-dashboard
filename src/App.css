@@ -342,6 +342,10 @@
   margin-top: var(--dl-space-space-oneandhalfunits);
 }
 
+.late-assignment-table-row {
+  background-color: #f8716c;
+}
+
 table,
 th,
 td {
@@ -478,8 +482,17 @@ td {
   background-color: #2196f3;
 }
 
+.checkbox-container input:checked ~ .checkbox-checkmark-paid {
+  background-color: #2196f3;
+}
+
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkbox-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checkbox-checkmark-paid:after {
   content: "";
   position: absolute;
   display: none;
@@ -490,8 +503,24 @@ td {
   display: block;
 }
 
+.checkbox-container input:checked ~ .checkbox-checkmark-paid:after {
+  display: block;
+}
+
 /* Style the checkmark/indicator */
 .checkbox-container .checkbox-checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox-container .checkbox-checkmark-paid:after {
   left: 6px;
   top: 2px;
   width: 5px;
@@ -544,6 +573,11 @@ td {
 }
 
 @media (max-width: 600px) {
+  table,
+  th,
+  td {
+    font-size: 0.4em;
+  }
   .dashboard-title h1 {
     margin-left: 1.3rem;
   }
@@ -599,7 +633,11 @@ td {
   }
 
   .checkbox-checkmark {
-    left: 15px;
+    left: 10px;
+  }
+
+  .checkbox-checkmark-paid {
+    left: 11px;
   }
   .tools-grid-container h3 {
     text-align: center;
@@ -607,6 +645,22 @@ td {
 
   .tools-grid-content {
     width: 90%;
+  }
+}
+
+@media (max-width: 360px) {
+  table,
+  th,
+  td {
+    font-size: 0.2em;
+  }
+
+  .assignments-table-set {
+    margin-left: 10px;
+  }
+
+  .checkbox-checkmark {
+    left: 15px;
   }
 }
 

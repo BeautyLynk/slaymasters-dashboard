@@ -14,6 +14,7 @@ const Dashboard = () => {
     const [userInfo, setUserInfo] = useState([])
     const [userAssignments, setUserAssignments] = useState([])
     const [isEmpty, setIsEmpty] = useState(false)
+    const [date, setDate] = useState()
 
     useEffect(() => {
         getUserInfo()
@@ -66,6 +67,43 @@ const Dashboard = () => {
 
     }
 
+    const formateDate = (assignmentDate) => {
+        const date = new Date(assignmentDate)
+        const formattedDate = date.toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        })
+
+        return formattedDate
+
+    }
+
+    const checkLateAssignment = (assignmentDate) => {
+        var date = new Date();
+        var m = date.getMonth();
+        var d = date.getDay()+1;
+        var y = date.getFullYear();
+
+        var todaysDate = formateDate(new Date(y,m,d));
+        
+        console.log("Todays date: " + todaysDate + "    " + "Assignment Date: " + formateDate(assignmentDate))
+
+        formateDate(todaysDate)
+        
+        if(todaysDate<formateDate(assignmentDate))
+        {
+            return "assignment-table-row";
+        }
+        else if(todaysDate>formateDate(assignmentDate))
+
+        {
+            return "late-assignment-table-row"
+        } 
+
+    }
+
+
     Boolean.prototype.myChecker = function() {
         if (this.valueOf() === true) {
           return "checked";
@@ -73,11 +111,6 @@ const Dashboard = () => {
           return  "";
         }
     };
-
-
-    // const renderUserName = () => {
-    //     return userInfo.map(info => (<h1> Welcome {info.first_name}</h1>))
-    // }
 
     return (
         <Layout >
@@ -132,7 +165,6 @@ const Dashboard = () => {
                         <div className="assignments-container">
                             <div className="assignments-table-set">
                             <h3>UPCOMING ASSIGNMENTS</h3>
-                            {console.log("Assignments: " + userAssignments.length)}
                             {isEmpty 
                                 ? <h4>No Assignment Available!</h4> 
                                 :
@@ -143,12 +175,14 @@ const Dashboard = () => {
                                             <th><h4>Submitted</h4></th>
                                             <th><h4>Approved</h4></th>
                                             <th><h4>Paid</h4></th>
+                                            <th><h4>Due Date</h4></th>
                                         </tr>
                                     </thead>
 
                                     {userAssignments.map((assignment, index) => (
-                                        <tbody key={index} className="assignment-table-row">
-                                        <tr key={index}>
+                                        <tbody key={index} >
+                                        {/* <tr className="assignment-table-row" key={index}> */}
+                                        <tr className={checkLateAssignment(assignment.due_date)} key={index}>
                                             <td><h4>{assignment.video_assignment}</h4></td>
                                             <td>
                                                 <label className="checkbox-container" disabled>
@@ -167,6 +201,13 @@ const Dashboard = () => {
                                                     <input className="tr-checkbox" type="checkbox" checked={assignment.paid.myChecker()} name="paid" disabled/>
                                                     <span className="checkbox-checkmark-paid" disabled></span>
                                                 </label>
+                                            </td>
+                                            <td>
+                                                <h4>
+                                                    {
+                                                        formateDate(assignment.due_date)
+                                                    }
+                                                </h4>
                                             </td>
                                         </tr>
                                         </tbody>
