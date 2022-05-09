@@ -8,7 +8,6 @@ import { Helmet } from "react-helmet";
 const Home = () => {
     return (
         <Layout>
-            <div className="home-layout">
             <Helmet>   
                 <title>SLAYMASTER - Create Beauty Content That Slays, Hair Tutorial</title>
                 <meta 
@@ -16,6 +15,7 @@ const Home = () => {
                     content="Build an empowering community for #EVERYONES beauty journey through video, blogging, and other forms of media. CREATE BEAUTY CONTENT THAT SLAYS!" 
                 />
             </Helmet>
+            <div className="home-layout">
                 <div className="home-content-container">
                     <div className="content-header-container">
                         <h1 className="content-header">Time to Slay!</h1>
