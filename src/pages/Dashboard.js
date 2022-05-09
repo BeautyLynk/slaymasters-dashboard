@@ -69,11 +69,7 @@ const Dashboard = () => {
 
     const formateDate = (assignmentDate) => {
         const date = new Date(assignmentDate)
-        const formattedDate = date.toLocaleDateString("en-GB", {
-            day: "numeric",
-            month: "long",
-            year: "numeric"
-        })
+        const formattedDate = date.toLocaleDateString()
 
         return formattedDate
 
@@ -85,22 +81,24 @@ const Dashboard = () => {
         var d = date.getDate();
         var y = date.getFullYear();
 
-        var todaysDate = formateDate(new Date(y,m,d));
+        var rawDate = new Date();
+
+        var todaysDate = formateDate(new Date());
+        console.log("Todays RAW date: " + rawDate) 
         
-        console.log("Todays date: " + todaysDate + "    " + "Assignment Date: " + formateDate(assignmentDate))
+        console.log("Todays date: " + todaysDate.toString() + "    " + "Assignment Date: " + formateDate(assignmentDate))
 
         formateDate(todaysDate)
 
-        if(todaysDate<formateDate(assignmentDate))
-        {
-            return "assignment-table-row";
-        }
-        else if(todaysDate>formateDate(assignmentDate))
 
-        {
+        if(todaysDate > formateDate(assignmentDate)){
+            console.log("Assignment is late!")
             return "late-assignment-table-row"
-        } 
 
+        }else if(todaysDate <= formateDate(assignmentDate)){
+            console.log("Assignment is early!")
+            return "assignment-table-row";
+        } 
     }
 
 
@@ -182,6 +180,7 @@ const Dashboard = () => {
                                     {userAssignments.map((assignment, index) => (
                                         <tbody key={index} >
                                         {/* <tr className="assignment-table-row" key={index}> */}
+                                        {console.log("logging due date befkre table: " + assignment.due_date)}
                                         <tr className={checkLateAssignment(assignment.due_date)} key={index}>
                                             <td><h4>{assignment.video_assignment}</h4></td>
                                             <td>
