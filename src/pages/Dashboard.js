@@ -82,7 +82,7 @@ const Dashboard = () => {
     const checkLateAssignment = (assignmentDate) => {
         var date = new Date();
         var m = date.getMonth();
-        var d = date.getDay()+1;
+        var d = date.getDate();
         var y = date.getFullYear();
 
         var todaysDate = formateDate(new Date(y,m,d));
@@ -90,7 +90,7 @@ const Dashboard = () => {
         console.log("Todays date: " + todaysDate + "    " + "Assignment Date: " + formateDate(assignmentDate))
 
         formateDate(todaysDate)
-        
+
         if(todaysDate<formateDate(assignmentDate))
         {
             return "assignment-table-row";
