@@ -69,7 +69,11 @@ const Dashboard = () => {
 
     const formateDate = (assignmentDate) => {
         const date = new Date(assignmentDate)
-        const formattedDate = date.toLocaleDateString()
+        const formattedDate = date.toLocaleDateString('en-US', {
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric'
+        })
 
         return formattedDate
 
@@ -83,19 +87,21 @@ const Dashboard = () => {
 
         var rawDate = new Date();
 
-        var todaysDate = formateDate(new Date());
+        var todaysDate = new Date().valueOf();
         console.log("Todays RAW date: " + rawDate) 
         
         console.log("Todays date: " + todaysDate.toString() + "    " + "Assignment Date: " + formateDate(assignmentDate))
 
-        formateDate(todaysDate)
+        // formateDate(todaysDate)
+        // Converts value Date value into an integer
+        var assignment = new Date(assignmentDate).valueOf()
 
 
-        if(todaysDate > formateDate(assignmentDate)){
+        if(todaysDate > assignment){
             console.log("Assignment is late!")
             return "late-assignment-table-row"
 
-        }else if(todaysDate <= formateDate(assignmentDate)){
+        }else if(todaysDate < assignment){
             console.log("Assignment is early!")
             return "assignment-table-row";
         } 

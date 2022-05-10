@@ -14,7 +14,7 @@ import { Helmet } from "react-helmet";
 
 ReactDOM.render(
   <AuthProvider>
-    <Helmet>
+    {/* <Helmet>
       <head> 
           <title>SLAYMASTER - Create Beauty Content That Slays, Hair Tutorial</title>
           <meta 
@@ -23,7 +23,7 @@ ReactDOM.render(
               data-react-helmet="true" 
           />
       </head>  
-    </Helmet>
+    </Helmet> */}
     <BrowserRouter>
       <Routes>
         <Route index element={<Home/>}/>
