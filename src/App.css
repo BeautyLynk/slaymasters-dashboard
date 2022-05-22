@@ -366,6 +366,20 @@ td {
   border-color: var(--brand-color);
 }
 
+table,
+th {
+  border: 1px solid black;
+}
+
+.assignments-table-links {
+  text-decoration: none;
+  color: black;
+}
+
+.assignments-table-links:hover {
+  color: var(--brand-color);
+}
+
 .dashboard-assignment-tools-title-container {
   display: grid;
   grid-template-columns: 1fr 1fr;

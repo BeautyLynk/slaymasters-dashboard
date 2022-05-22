@@ -8,6 +8,9 @@ import howToCreate from '../Assets/how_to_create.png'
 import howToRecord from '../Assets/how-to-record.png'
 import howTo from '../Assets/how_to.png'
 import howToFrame from '../Assets/how_to_frame.png'
+import howToFilm from '../Assets/how_to_film_at_home.png'
+import SocialMediaTrends from '../Assets/social_media_trends.mp4'
+
 
 const Dashboard = () => {
     const auth = useAuth();
@@ -68,14 +71,19 @@ const Dashboard = () => {
     }
 
     const formateDate = (assignmentDate) => {
-        const date = new Date(assignmentDate)
-        const formattedDate = date.toLocaleDateString('en-US', {
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric'
-        })
+        if(assignmentDate == null){
+            return "No due date"
+        }else{
+            const date = new Date(assignmentDate)
+            const formattedDate = date.toLocaleDateString('en-US', {
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric'
+            })
+           
 
-        return formattedDate
+            return formattedDate
+        }
 
     }
 
@@ -187,8 +195,12 @@ const Dashboard = () => {
                                         <tbody key={index} >
                                         {/* <tr className="assignment-table-row" key={index}> */}
                                         {console.log("logging due date befkre table: " + assignment.due_date)}
-                                        <tr className={checkLateAssignment(assignment.due_date)} key={index}>
-                                            <td><h4>{assignment.video_assignment}</h4></td>
+                                        <tr className="assignment-table-row" key={index}>
+                                                <td>
+                                                    <Link className="assignments-table-links" to={`//${assignment.link}`} target='_blank'>
+                                                        <h4>{assignment.video_assignment}</h4>
+                                                    </Link>
+                                                </td>
                                             <td>
                                                 <label className="checkbox-container" disabled>
                                                     <input className="tr-checkbox" type="checkbox" checked={assignment.submitted.myChecker()} name="submitted" disabled/>
@@ -239,6 +251,7 @@ const Dashboard = () => {
                                     <div className="tools-grid-item"><Link to="//tk8wnxtrmyu.typeform.com/to/jg8s2uvd" target='_blank'><button >REFER A FRIEND TO BE A SLAYMASTER</button></Link></div>
                                     <div className="tools-grid-item"><Link to="//www.google.com" target='_blank'><button onClick={() => window.location.href = 'mailto:tickets@slaymaster-creators.p.tawk.email'}> GET HELP</button></Link></div>
                                     <div className="tools-grid-item"><Link to="//slaymastercreators.tawk.help/" target='_blank'><button >VIDEO GUIDELINES</button></Link></div>
+                                    <div className="tools-grid-item"><Link to="//www.amazon.com/" target='_blank'><button > RECOMMENDED PRODUCTS FOR FILMING KIT </button></Link></div>
                                 </div>
                             </div>
                         </div>
@@ -288,18 +301,24 @@ const Dashboard = () => {
                                 controls
                                 className="training-video"
                             ></video> */}
-                                <video
+                            <video
                                 src="https://sduxzxrctlxqqbmtfsqr.supabase.co/storage/v1/object/sign/trainingvideos/v5.mp4 (720p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ0cmFpbmluZ3ZpZGVvcy92NS5tcDQgKDcyMHApLm1wNCIsImlhdCI6MTY1MTU5NzM2NSwiZXhwIjoxOTY2OTU3MzY1fQ.bieSr320KaKG9O3HusjHTTxyU12GpW3K5xZZmfe5cws"
                                 loop
                                 muted
-                                // poster={}
+                                poster={howToFilm}
                                 controls
                                 className="training-video"
                             ></video>
+                            {/* <video
+                                src={SocialMediaTrends}
+                                loop
+                                muted
+                                poster=""
+                                controls
+                                className="training-video"
+                            ></video> */}
                         </div>
                     </div>
-
-
                 </div>
             </div>  
         </Layout>
