@@ -115,6 +115,19 @@ const Dashboard = () => {
         } 
     }
 
+    const assignmentLinkHandler = (link, video) => {
+        if(link == null){
+            return <h4>{video}</h4>
+        }else{
+            return (
+                <Link className="assignments-table-links" to={`//${link}`} target='_blank'>
+                    <h4>{video}</h4>
+                </Link>  
+            )
+        }
+        
+    }
+
 
     Boolean.prototype.myChecker = function() {
         if (this.valueOf() === true) {
@@ -195,13 +208,12 @@ const Dashboard = () => {
                                         <tbody key={index} >
                                         {/* <tr className="assignment-table-row" key={index}> */}
                                         {console.log("logging due date befkre table: " + assignment.due_date)}
-                                        <tr className="assignment-table-row" key={index}>
-                                                <td>
-
-                                                    <Link className="assignments-table-links" to={`//${assignment.link}`} target='_blank'>
-                                                        <h4>{assignment.video_assignment}</h4>
-                                                    </Link>
-                                                </td>
+                                        <tr className={checkLateAssignment(assignment.due_date)} key={index}>
+                                            <td>
+                                                { 
+                                                    assignmentLinkHandler(assignment.link,assignment.video_assignment)
+                                                }                                                        
+                                            </td>
                                             <td>
                                                 <label className="checkbox-container" disabled>
                                                     <input className="tr-checkbox" type="checkbox" checked={assignment.submitted.myChecker()} name="submitted" disabled/>
