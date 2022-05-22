@@ -9,7 +9,7 @@ import howToRecord from '../Assets/how-to-record.png'
 import howTo from '../Assets/how_to.png'
 import howToFrame from '../Assets/how_to_frame.png'
 import howToFilm from '../Assets/how_to_film_at_home.png'
-import SocialMediaTrends from '../Assets/social_media_trends.mp4'
+// import SocialMediaTrends from '../Assets/social_media_trends.mp4'
 
 
 const Dashboard = () => {
@@ -197,6 +197,7 @@ const Dashboard = () => {
                                         {console.log("logging due date befkre table: " + assignment.due_date)}
                                         <tr className="assignment-table-row" key={index}>
                                                 <td>
+
                                                     <Link className="assignments-table-links" to={`//${assignment.link}`} target='_blank'>
                                                         <h4>{assignment.video_assignment}</h4>
                                                     </Link>
