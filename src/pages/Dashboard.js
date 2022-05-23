@@ -104,8 +104,11 @@ const Dashboard = () => {
         // Converts value Date value into an integer
         var assignment = new Date(assignmentDate).valueOf()
 
-
-        if(todaysDate > assignment){
+        if(assignmentDate == null){
+            console.log("There is no due date!")
+            return "assignment-table-row";
+        }
+        else if(todaysDate > assignment){
             console.log("Assignment is late!")
             return "late-assignment-table-row"
 
