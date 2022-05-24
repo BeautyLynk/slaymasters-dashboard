@@ -88,10 +88,10 @@ const Dashboard = () => {
     }
 
     const checkLateAssignment = (assignmentDate) => {
-        var date = new Date();
-        var m = date.getMonth();
-        var d = date.getDate();
-        var y = date.getFullYear();
+        // var date = new Date();
+        // var m = date.getMonth();
+        // var d = date.getDate();
+        // var y = date.getFullYear();
 
         var rawDate = new Date();
 
