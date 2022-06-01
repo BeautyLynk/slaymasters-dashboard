@@ -432,6 +432,21 @@ th {
   font-weight: bold;
 }
 
+.how_to_use_dash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 3px solid green; */
+  grid-template-columns: auto;
+}
+
+.how_to_use_dash-video {
+  width: 700px;
+  height: 470px;
+  margin-bottom: 50px;
+}
+
 .training-videos-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -642,6 +657,10 @@ th {
   .training-videos-grid {
   }
   .training-video {
+    width: 90%;
+  }
+
+  .how_to_use_dash-video {
     width: 90%;
   }
 
