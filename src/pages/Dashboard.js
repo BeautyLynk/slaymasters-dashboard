@@ -278,7 +278,7 @@ const Dashboard = () => {
                     </div>
 
                     <div className="tutorial-iframe-container">
-                        <h1>How to Use the Dashboard</h1>
+                        <h1 className="how_to_use_dash-title">How to Use the Dashboard</h1>
                         <div className="how_to_use_dash">
                             <iframe 
                                 src="https://www.loom.com/embed/6d4a401469a349a29b80ed4611080c20" 
