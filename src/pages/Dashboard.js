@@ -9,7 +9,10 @@ import howToRecord from '../Assets/how-to-record.png'
 import howTo from '../Assets/how_to.png'
 import howToFrame from '../Assets/how_to_frame.png'
 import howToFilm from '../Assets/how_to_film_at_home.png'
-// import SocialMediaTrends from '../Assets/social_media_trends.mp4'
+import SocialMediaTrends from '../Assets/tut-Video-1.mp4'
+import howToFindTrends from '../Assets/how_to_find_trends.jpg'
+import howToUseDashboard from '../Assets/how_to_use_dashboard.jpg'
+
 
 
 const Dashboard = () => {
@@ -267,11 +270,25 @@ const Dashboard = () => {
                                     <div className="tools-grid-item"><Link to="//tk8wnxtrmyu.typeform.com/to/jg8s2uvd" target='_blank'><button >REFER A FRIEND TO BE A SLAYMASTER</button></Link></div>
                                     <div className="tools-grid-item"><Link to="//www.google.com" target='_blank'><button onClick={() => window.location.href = 'mailto:tickets@slaymaster-creators.p.tawk.email'}> GET HELP</button></Link></div>
                                     <div className="tools-grid-item"><Link to="//slaymastercreators.tawk.help/" target='_blank'><button >VIDEO GUIDELINES</button></Link></div>
-                                    <div className="tools-grid-item"><Link to="//www.amazon.com/" target='_blank'><button > RECOMMENDED PRODUCTS FOR FILMING KIT </button></Link></div>
+                                    <div className="tools-grid-item"><Link to="//a.co/3aOZPuu" target='_blank'><button > RECOMMENDED PRODUCTS FOR FILMING KIT </button></Link></div>
                                 </div>
                             </div>
                         </div>
 
+                    </div>
+
+                    <div className="tutorial-iframe-container">
+                        <h1>How to Use the Dashboard</h1>
+                        <div style="position: relative; padding-bottom: 66.66666666666666%; height: 0;">
+                            <iframe 
+                                src="https://www.loom.com/embed/6d4a401469a349a29b80ed4611080c20" 
+                                frameborder="0" 
+                                webkitallowfullscreen 
+                                mozallowfullscreen 
+                                allowfullscreen 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            </iframe>
+                        </div>
                     </div>
 
                     <div className="dashboard-training">
@@ -325,14 +342,14 @@ const Dashboard = () => {
                                 controls
                                 className="training-video"
                             ></video>
-                            {/* <video
+                            <video
                                 src={SocialMediaTrends}
                                 loop
                                 muted
-                                poster=""
+                                poster={howToFindTrends}
                                 controls
                                 className="training-video"
-                            ></video> */}
+                            ></video>
                         </div>
                     </div>
                 </div>
