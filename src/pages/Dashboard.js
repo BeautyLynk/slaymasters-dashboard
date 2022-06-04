@@ -9,7 +9,6 @@ import howToRecord from '../Assets/how-to-record.png'
 import howTo from '../Assets/how_to.png'
 import howToFrame from '../Assets/how_to_frame.png'
 import howToFilm from '../Assets/how_to_film_at_home.png'
-import SocialMediaTrends from '../Assets/tut-Video-1.mp4'
 import howToFindTrends from '../Assets/how_to_find_trends.jpg'
 import howToUseDashboard from '../Assets/how_to_use_dashboard.jpg'
 
