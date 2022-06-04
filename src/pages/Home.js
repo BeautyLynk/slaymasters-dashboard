@@ -1,11 +1,33 @@
-import React from 'react'
+import React, { useEffect} from 'react'
 import Layout from '../components/Layout'
 import { Link } from 'react-router-dom' 
 import { Helmet } from "react-helmet";
+import { useAuth } from '../Auth/auth'
+import { useNavigate } from "react-router-dom";
+import { useLocation } from 'react-router-dom'
 
 
 
 const Home = () => {
+    const auth = useAuth()
+    let navigate = useNavigate();
+    let location = useLocation();
+
+    useEffect(() => {
+        checkUser()
+    })
+
+    const checkUser = () => {
+        console.log("Pathname: " + location.pathname);
+        // Check if user is signed in and if pathname matches the sign-in page 
+        // If true then will send them to the dashboard
+        if(auth.user && location.pathname === "/dashboard"){
+            console.log("Pathname: " + location.pathname);
+
+            navigate("../dashboard", { replace: true });
+        }
+    }
+
     return (
         <Layout>
             <Helmet>   

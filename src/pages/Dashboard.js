@@ -327,14 +327,6 @@ const Dashboard = () => {
                                 controls
                                 className="training-video"
                             ></video>
-                            {/* <video
-                                src="https://sduxzxrctlxqqbmtfsqr.supabase.co/storage/v1/object/sign/trainingvideos/Video-1.mp4?to[…]YyNjc3fQ.Yo03TQGfiqX3A873urN96tLWjduJE2bpFuhCFxRvSrE"
-                                loop
-                                muted
-                                // poster={howToFrame}
-                                controls
-                                className="training-video"
-                            ></video> */}
                             <video
                                 src="https://sduxzxrctlxqqbmtfsqr.supabase.co/storage/v1/object/sign/trainingvideos/v5.mp4 (720p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ0cmFpbmluZ3ZpZGVvcy92NS5tcDQgKDcyMHApLm1wNCIsImlhdCI6MTY1MTU5NzM2NSwiZXhwIjoxOTY2OTU3MzY1fQ.bieSr320KaKG9O3HusjHTTxyU12GpW3K5xZZmfe5cws"
                                 loop
