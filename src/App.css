@@ -441,6 +441,15 @@ th {
   grid-template-columns: auto;
 }
 
+.how_to_use_dash-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 3px solid green; */
+  grid-template-columns: auto;
+}
+
 .how_to_use_dash-video {
   width: 700px;
   height: 470px;

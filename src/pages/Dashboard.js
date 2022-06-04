@@ -271,6 +271,7 @@ const Dashboard = () => {
                                     <div className="tools-grid-item"><Link to="//www.google.com" target='_blank'><button onClick={() => window.location.href = 'mailto:tickets@slaymaster-creators.p.tawk.email'}> GET HELP</button></Link></div>
                                     <div className="tools-grid-item"><Link to="//slaymastercreators.tawk.help/" target='_blank'><button >VIDEO GUIDELINES</button></Link></div>
                                     <div className="tools-grid-item"><Link to="//a.co/3aOZPuu" target='_blank'><button > RECOMMENDED PRODUCTS FOR FILMING KIT </button></Link></div>
+                                    <div className="tools-grid-item"><Link to="//tk8wnxtrmyu.typeform.com/to/JUR8aiOi" target='_blank'><button className="tools-grid-button_feedback" > GIVE US FEEDBACK </button></Link></div>
                                 </div>
                             </div>
                         </div>
@@ -278,7 +279,7 @@ const Dashboard = () => {
                     </div>
 
                     <div className="tutorial-iframe-container">
-                        <h1 className="how_to_use_dash-title">How to Use the Dashboard</h1>
+                        <h1 className="how_to_use_dash-title">HOW TO USE DASHBOARD</h1>
                         <div className="how_to_use_dash">
                             <iframe 
                                 src="https://www.loom.com/embed/6d4a401469a349a29b80ed4611080c20" 
@@ -293,7 +294,7 @@ const Dashboard = () => {
                     </div>
 
                     <div className="dashboard-training">
-                        <h1>Training Videos</h1>
+                        <h1>TRAINING VIDEOS</h1>
                         <div className="training-videos-grid">
                             <video
                                 src="https://sduxzxrctlxqqbmtfsqr.supabase.co/storage/v1/object/sign/trainingvideos/My Lighting for YouTube Videos - CRISP CLEAR YOUTUBE videos (DAY &amp; NIGHT).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ0cmFpbmluZ3ZpZGVvcy9NeSBMaWdodGluZyBmb3IgWW91VHViZSBWaWRlb3MgLSBDUklTUCBDTEVBUiBZT1VUVUJFIHZpZGVvcyAoREFZICYgTklHSFQpLm1wNCIsImlhdCI6MTY0OTgwNjUwMiwiZXhwIjoxOTY1MTY2NTAyfQ.t2PV_VP5pRMi-U2D9BfhU1QRZe7LnuxXT0nPuVDKer4"
@@ -344,7 +345,8 @@ const Dashboard = () => {
                                 className="training-video"
                             ></video>
                             <video
-                                src={SocialMediaTrends}
+                                // src={SocialMediaTrends}
+                                src="https://res.cloudinary.com/dj6o8qccm/video/upload/v1654377819/tut-Video-1_1_sfvvqt.mp4"
                                 loop
                                 muted
                                 poster={howToFindTrends}
