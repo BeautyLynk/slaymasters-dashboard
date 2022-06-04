@@ -12,22 +12,37 @@ import UploadImages from './pages/UploadImages'
 import { Helmet } from "react-helmet";
 
 
-import { hydrate, render } from "react-dom";
+ReactDOM.render(
+  <AuthProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home/>}/>
+        <Route path={"sign-in"} element={<SignIn/>}/>
+        <Route path={"dashboard"} element={<ProtectedRoute> <Dashboard/> </ProtectedRoute>}/>
+        <Route path={"upload-images"} element={<ProtectedRoute> <UploadImages/> </ProtectedRoute>}/>
+      </Routes>
+    </BrowserRouter>
+  </AuthProvider>,
+  document.getElementById('root')
+);
 
-const APP = (<AuthProvider>
-  <BrowserRouter>
-    <Routes>
-      <Route index element={<Home/>}/>
-      <Route path={"sign-in"} element={<SignIn/>}/>
-      <Route path={"dashboard"} element={<ProtectedRoute> <Dashboard/> </ProtectedRoute>}/>
-      <Route path={"upload-images"} element={<ProtectedRoute> <UploadImages/> </ProtectedRoute>}/>
-    </Routes>
-  </BrowserRouter>
-</AuthProvider>)
+
+// import { hydrate, render } from "react-dom";
+
+// const APP = (<AuthProvider>
+//   <BrowserRouter>
+//     <Routes>
+//       <Route index element={<Home/>}/>
+//       <Route path={"sign-in"} element={<SignIn/>}/>
+//       <Route path={"dashboard"} element={<ProtectedRoute> <Dashboard/> </ProtectedRoute>}/>
+//       <Route path={"upload-images"} element={<ProtectedRoute> <UploadImages/> </ProtectedRoute>}/>
+//     </Routes>
+//   </BrowserRouter>
+// </AuthProvider>)
  
-const rootElement = document.getElementById("root");
-if (rootElement.hasChildNodes()) {
-  hydrate(APP, rootElement);
-} else {
-  render(APP, rootElement);
-}
+// const rootElement = document.getElementById("root");
+// if (rootElement.hasChildNodes()) {
+//   hydrate(APP, rootElement);
+// } else {
+//   render(APP, rootElement);
+// }
