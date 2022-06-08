@@ -4,6 +4,7 @@ import { supabase } from '../database/Database'
 import { useAuth } from '../Auth/auth'
 import { Link } from 'react-router-dom'
 import "../App.css"
+
 import howToCreate from '../Assets/how_to_create.png'
 import howToRecord from '../Assets/how-to-record.png'
 import howTo from '../Assets/how_to.png'
@@ -22,6 +23,10 @@ const Dashboard = () => {
     const [date, setDate] = useState()
 
     useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
         getUserInfo()
         getUserAssignments()
     },[])
@@ -157,7 +162,10 @@ const Dashboard = () => {
                         <h2>UPDATES</h2>
                         <div className="updates-info">
                             <p1>
-                                ALL UPDATES WILL BE SHARED VIA VIDEO AND VIA EMAIL AS THINGS ARE HAPPENING. WE VALUE YOUR FEEDBACK !
+                            As a <Link 
+                                    className="dashboard-updates_hyperlink" 
+                                    to="//sduxzxrctlxqqbmtfsqr.supabase.co/storage/v1/object/sign/onboarding/SLAYMASTER_ONBOARDING.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvbmJvYXJkaW5nL1NMQVlNQVNURVJfT05CT0FSRElORy5wZGYiLCJpYXQiOjE2NTM0ODMzMjksImV4cCI6MTk2ODg0MzMyOX0.7FilJPs0RXJoex_DBbIuEzwUzqcUyNBwwWrBBM3PPn8&t=2022-05-25T12%3A55%3A31.539Z" 
+                                    target='_blank'>SLAYMASTER</Link> you play an important role in the work we do. All updates on what we are doing as a company will be found on your dashboard and welcome you to share your feedback.
                                 <br></br>
                                 <br></br>XO, 
     ​                            <br></br>THE TEAM  

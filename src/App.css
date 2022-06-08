@@ -321,6 +321,10 @@
   /* border: 3px solid green; */
   padding-top: 30px;
 }
+
+.dashboard-updates_hyperlink {
+}
+
 .updates-iframe {
   margin: 20px;
   width: 90%;
